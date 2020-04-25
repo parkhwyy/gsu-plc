@@ -6,16 +6,16 @@ import java.lang.Character;
 
 public class rda {
 
-    public final static int INT_LIT = 10;
-    public final static int IDENT = 11;
-    public final static int ASSIGN_OP = 20;
-    public final static int ADD_OP = 21;
-    public final static int SUB_OP = 22;
-    public final static int MULT_OP = 23;
+	public final static int INT_LIT = 10;
+	public final static int IDENT = 11;
+	public final static int ASSIGN_OP = 20;
+	public final static int ADD_OP = 21;
+	public final static int SUB_OP = 22;
+	public final static int MULT_OP = 23;
 	public final static int DIV_OP = 24;
 	public final static int MOD_OP = 25;
-    public final static int LEFT_PAREN = 26;
-    public final static int RIGHT_PAREN = 27;
+	public final static int LEFT_PAREN = 26;
+	public final static int RIGHT_PAREN = 27;
 
 	public final static int EOF = -1;
 
@@ -25,7 +25,7 @@ public class rda {
 	public static int lexLen;
 	public static int token;
 	public static int nextToken;
-    public static RandomAccessFile inFp;
+	public static RandomAccessFile inFp;
     
 	public static void expr() {
 		System.out.println("Enter <expr>");
