@@ -7,18 +7,18 @@ import java.lang.Character;
 public class front {
 	
 	public final static int LETTER = 0;
-    public final static int DIGIT = 1;
-    public final static int UNKNOWN = 99;
+	public final static int DIGIT = 1;
+	public final static int UNKNOWN = 99;
 
-    public final static int INT_LIT = 10;
-    public final static int IDENT = 11;
-    public final static int ASSIGN_OP = 20;
-    public final static int ADD_OP = 21;
-    public final static int SUB_OP = 22;
-    public final static int MULT_OP = 23;
-    public final static int DIV_OP = 24;
-    public final static int LEFT_PAREN = 25;
-    public final static int RIGHT_PAREN = 26;
+	public final static int INT_LIT = 10;
+	public final static int IDENT = 11;
+	public final static int ASSIGN_OP = 20;
+	public final static int ADD_OP = 21;
+	public final static int SUB_OP = 22;
+	public final static int MULT_OP = 23;
+	public final static int DIV_OP = 24;
+	public final static int LEFT_PAREN = 25;
+	public final static int RIGHT_PAREN = 26;
 
 	public final static int EOF = -1;
 
@@ -28,7 +28,7 @@ public class front {
 	public static int lexLen;
 	public static int token;
 	public static int nextToken;
-    public static RandomAccessFile inFp;
+	public static RandomAccessFile inFp;
     
 	public static void main(final String[] args) {
 		try {
@@ -41,9 +41,9 @@ public class front {
 			inFp = null;
 			System.out.println("ERROR - cannot open front.in ");
 		}
-    }
+    	}
 
-    public static int lookup(final byte ch) {
+    	public static int lookup(final byte ch) {
 		switch(ch) {
 		case '(':
 			addChar();
@@ -84,9 +84,9 @@ public class front {
 		} else {
 			System.out.println("Error - lexeme is too long ");
 		}
-    }
+    	}
     
-    public static void getChar() {
+	public static void getChar() {
 		try {
 			if((nextChar = (byte)inFp.read()) != EOF) {
 				if(Character.isLetter(nextChar) != false) {
@@ -102,15 +102,15 @@ public class front {
 		} catch(final IOException ex) {
 			throw new RuntimeException(ex);
 		}
-    }
+	}
     
 	public static void getNonBlank() {
 		while(Character.isWhitespace(nextChar) != false) {
 			getChar();
 		}
-    }
+    	}
     
-    public static int lex() {
+    	public static int lex() {
 		lexLen = 0;
 		getNonBlank();
 		switch(charClass) {
