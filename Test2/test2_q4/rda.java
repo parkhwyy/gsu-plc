@@ -1,3 +1,4 @@
+package test2_q4;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -11,9 +12,10 @@ public class rda {
     public final static int ADD_OP = 21;
     public final static int SUB_OP = 22;
     public final static int MULT_OP = 23;
-    public final static int DIV_OP = 24;
-    public final static int LEFT_PAREN = 25;
-    public final static int RIGHT_PAREN = 26;
+	public final static int DIV_OP = 24;
+	public final static int MOD_OP = 25;
+    public final static int LEFT_PAREN = 26;
+    public final static int RIGHT_PAREN = 27;
 
 	public final static int EOF = -1;
 
@@ -38,7 +40,7 @@ public class rda {
 	public static void term() {
 		System.out.println("Enter <term>");
 		factor();
-		while(nextToken == MULT_OP || nextToken == DIV_OP) {
+		while(nextToken == MULT_OP || nextToken == DIV_OP || nextToken == MOD_OP) {
 			lex();
 			factor();
 		}
@@ -69,4 +71,9 @@ public class rda {
 
 		System.out.println("Exit <factor>");
 	}
+
+	public static void error() {
+		System.out.println("Error: Invalid Token.");
+	}
+
 }
