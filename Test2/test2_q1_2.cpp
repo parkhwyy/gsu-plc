@@ -56,13 +56,13 @@ int main() {
 
 void TempLevel(int convertedValue) {
 
-string result;
+    string result;
 
-convertedValue <= 15 ? result = "Temperature is low" : "";
-convertedValue > 15 && convertedValue <= 30 ? result = "Temperature is normal" : "";
-convertedValue > 30 && convertedValue <= 45 ? result = "Temperature is high" : "";
-convertedValue > 45 ? result = "Temperature is extemely high" : "";
+    convertedValue <= 15 ? result = "Temperature is low" : "";
+    convertedValue > 15 && convertedValue <= 30 ? result = "Temperature is normal" : "";
+    convertedValue > 30 && convertedValue <= 45 ? result = "Temperature is high" : "";
+    convertedValue > 45 ? result = "Temperature is extemely high" : "";
 
-cout << result << endl;
+    cout << result << endl;
 
 }
