@@ -245,7 +245,7 @@ class Term {
 	Code c;
 	Term() {
 		f = new Factor();
-		if (Lexer.nextToken == Token.MULT_OP || Lexer.nextToken == Token.DIV_OP) {
+		if (Lexer.nextToken == Token.MULT_OP || Lexer.nextToken == Token.DIV_OP || Lexer.nextToken == Token.MOD_OP) {
 			int op = Lexer.nextToken;
 			Lexer.lex();
 			t1 = new Term();
